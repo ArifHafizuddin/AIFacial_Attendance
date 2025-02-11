@@ -1,96 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Face-In Logo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f9f9f9;
-      margin: 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .icon {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      border: 4px solid #00352C; /* Dark teal color */
-      border-radius: 15px;
-      box-sizing: border-box;
-    }
-
-    /* Horizontal Lines */
-    .line {
-      position: absolute;
-      height: 10px;
-      background-color: #00352C; /* Dark teal color */
-      border-radius: 5px;
-      left: 0; /* Attached to box */
-      right: 0; /* Full width */
-    }
-
-    .line1 {
-      top: 40%; /* Position the first line */
-    }
-
-    .line2 {
-      top: 55%; /* Position the second line */
-    }
-
-    /* Head (circle) */
-    .head {
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 40px;
-      height: 40px;
-      background-color: #C2B89B; /* Beige */
-      border-radius: 50%;
-      z-index: 2; /* Place above lines */
-    }
-
-    /* Body (rectangle) */
-    .body {
-      position: absolute;
-      bottom: 15%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 70px;
-      height: 30px;
-      background-color: #C2B89B; /* Beige */
-      border-radius: 8px;
-      z-index: 2; /* Place above lines */
-    }
-
-    /* Text */
-    .text {
-      font-size: 28px;
-      color: #00352C; /* Dark teal color */
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Scan Icon</title>
 </head>
 <body>
-  <div class="logo">
-    <div class="icon">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="head"></div>
-      <div class="body"></div>
-    </div>
-    <span class="text">Face-In</span>
-  </div>
+    <svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer Rounded Square -->
+        <rect x="10" y="10" width="80" height="80" rx="15" ry="15" stroke="#004D40" stroke-width="5" fill="none"/>
+        
+        <!-- Head -->
+        <circle cx="50" cy="40" r="15" fill="#A0A07D"/>
+
+        <!-- Body -->
+        <rect x="30" y="55" width="40" height="25" rx="10" ry="10" fill="#A0A07D"/>
+
+        <!-- Scanning Frame (Top & Bottom Rounded Borders) -->
+        <path d="M20 30 Q20 20, 30 20 L70 20 Q80 20, 80 30" stroke="#004D40" stroke-width="5" fill="none"/>
+        <path d="M20 70 Q20 80, 30 80 L70 80 Q80 80, 80 70" stroke="#004D40" stroke-width="5" fill="none"/>
+        
+        <!-- Single Horizontal Scan Line in the Middle -->
+        <line x1="20" y1="50" x2="80" y2="50" stroke="#004D40" stroke-width="5"/>
+    </svg>
 </body>
 </html>
